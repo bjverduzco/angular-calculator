@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="calculatorApp">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
     <title>Angular Calc</title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body>
+  <body ng-controller="MainController">
     <div class="container">
 
     </div>
@@ -23,11 +23,12 @@
       <button type="button" ng-click="addNumber('8')" id="8">8</button>
       <button type="button" ng-click="addNumber('9')" id="9">9</button>
       <button type="button" ng-click="addNumber('0')" id="0">0</button>
-      <button type="button" ng-click="addNumber('+')" id="+">+</button>
-      <button type="button" ng-click="addNumber('-')" id="-">-</button>
-      <button type="button" ng-click="addNumber('*')" id="*">*</button>
-      <button type="button" ng-click="addNumber('/')" id="/">/</button>
+      <button type="button" ng-click="addOperator('+')" id="+">+</button>
+      <button type="button" ng-click="addOperator('-')" id="-">-</button>
+      <button type="button" ng-click="addOperator('*')" id="*">*</button>
+      <button type="button" ng-click="addOperator('/')" id="/">/</button>
       <button type="button" ng-click="calculate()" id="=">=</button>
+      <button type="button" ng-click="clear()">Ca/C</button>
     </div>
   </body>
 </html>

@@ -1,6 +1,7 @@
-angular.module('CaculatorApp', []);
 
-angular.module('CaculatorApp').controller('MainController', function($scope) {
+angular.module('calculatorApp', []);
+
+angular.module('calculatorApp').controller('MainController', function($scope) {
 
   $scope.display = '';
   $scope.numbersRight = [];
@@ -8,7 +9,7 @@ angular.module('CaculatorApp').controller('MainController', function($scope) {
   $scope.operators = [];
 
 
-  $scope.addNumber=function(number) {
+  $scope.addNumber = function(number) {
     if($scope.operators.length!=0){
       $scope.display += number;
       $scope.numbersRight.push(number);
@@ -19,7 +20,7 @@ angular.module('CaculatorApp').controller('MainController', function($scope) {
       console.log('Left', $scope.numbersLeft);
     }
 
-  };
+  }
 
   $scope.addOperator = function(operator){
      $scope.display += operator;
@@ -45,7 +46,7 @@ angular.module('CaculatorApp').controller('MainController', function($scope) {
         }
 
         var operator = $scope.operators.pop();
-        sum += calc(left, right, op);
+        sum += calc(left, right, operator);
 
       }
 
@@ -53,7 +54,14 @@ angular.module('CaculatorApp').controller('MainController', function($scope) {
       $scope.display = $scope.result;
       console.log($scope.result);
 
-  };
+  }
+
+  $scope.clear = function(){
+    $scope.display = '';
+    $scope.numbersRight = [];
+    $scope.numbersLeft = [];
+    $scope.operators = [];
+  }
 
    function calc(left, right , operator){
     switch(operator){

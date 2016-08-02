@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Angular Calc</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+    </div>
+    <div class="calc">
+      <input type="text" value="{{display}}"/>
+      <button type="button" ng-click="addNumber('1')" id="1">1</button>
+      <button type="button" ng-click="addNumber('2')" id="2">2</button>
+      <button type="button" ng-click="addNumber('3')" id="3">3</button>
+      <button type="button" ng-click="addNumber('4')" id="4">4</button>
+      <button type="button" ng-click="addNumber('5')" id="5">5</button>
+      <button type="button" ng-click="addNumber('6')" id="6">6</button>
+      <button type="button" ng-click="addNumber('7')" id="7">7</button>
+      <button type="button" ng-click="addNumber('8')" id="8">8</button>
+      <button type="button" ng-click="addNumber('9')" id="9">9</button>
+      <button type="button" ng-click="addNumber('0')" id="0">0</button>
+      <button type="button" ng-click="addNumber('+')" id="+">+</button>
+      <button type="button" ng-click="addNumber('-')" id="-">-</button>
+      <button type="button" ng-click="addNumber('*')" id="*">*</button>
+      <button type="button" ng-click="addNumber('/')" id="/">/</button>
+      <button type="button" ng-click="calculate()" id="=">=</button>
+    </div>
+  </body>
+</html>
